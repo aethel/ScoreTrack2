@@ -10,6 +10,9 @@ angular.module('stApp').directive('scoreItem', function(){
     },
     controllerAs: 'ScoreItemCtrl',
     link: function(scope,element,attr){
+      element.bind('click', function(){
+        alert('ff');
+      });
     }
   };
 });
