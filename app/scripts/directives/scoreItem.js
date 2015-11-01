@@ -12,17 +12,18 @@ angular.module('stApp').directive('scoreItem', function(){
     },
     controllerAs: 'ScoreItemCtrl',
     link: function(scope,element,attr){
-      scope.initPoints = scope.init.players;    
+      scope.initPoints = scope.init.points;    
       element.bind('click', function(){
        
       });
        
-      scope.addPoint = function(){
-  
-        var currentValue2 = element.next().text();
-        angular.element(this).next().text(scope.currentValue+1);
-      
-        console.log(currentValue2); 
+      scope.addPoint = function(event){
+        
+        var elem = event.target;
+        var value = parseInt(elem.nextElementSibling.textContent);
+        
+        value += 1;
+
    
 //        scope.initPoints += 1;
       };
