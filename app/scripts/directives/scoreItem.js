@@ -1,10 +1,13 @@
 'use strict';
 
-angular.module('stapp').directive('scoreItem', function(){
+angular.module('stApp').directive('scoreItem', function(){
   return {
     restrict:' E',
-    templateUrl: 'scoreItem.html',
-    controller: function(){},
+    templateUrl: '/scripts/directives/scoreItem.html',
+    transclude: true,
+    controller: function(){
+      console.log('is controll');
+    },
     controllerAs: 'ScoreItemCtrl',
     link: function(scope,element,attr){
     }
