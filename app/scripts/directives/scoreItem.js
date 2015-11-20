@@ -13,21 +13,28 @@ angular.module('stApp').directive('scoreItem', function(){
 		controllerAs: 'ScoreItemCtrl',
 		link: function(scope,element,attr){
 			scope.initPoints = scope.init.points;
-			element.bind('click', function(){
 
-			});
 
 			scope.addPoint = function(event){
-
 				var elem = event.target;
 				console.log(elem);
 				var value = parseInt(elem.nextElementSibling.textContent);
-				console.log(value);
-				value =(value+1).toString();
-
-
-//        scope.initPoints += 1;
+				var target = elem.nextElementSibling;
+				console.log(target, 'target');
+				value = value +1;
+				target.textContent = value;
 			};
+
+			scope.subtractPoint = function(event){
+				var elem = event.target;
+				console.log(elem);
+				var value = parseInt(elem.previousElementSibling.textContent);
+				var target = elem.previousElementSibling;
+				console.log(target, 'target');
+				value = value - 1;
+				target.textContent = value;
+			};
+
 
 		}
 	};
