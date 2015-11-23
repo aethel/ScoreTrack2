@@ -12,8 +12,7 @@ angular.module('stApp').directive('scoreItem', function(){
 		},
 		controllerAs: 'ScoreItemCtrl',
 		link: function(scope,element,attr){
-			scope.initPoints = scope.init.points;
-
+			scope.init.points <= 999 ? scope.initPoints = scope.init.points : scope.initPoints = 999
 
 			scope.addPoint = function(event){
 				var elem = event.target;
