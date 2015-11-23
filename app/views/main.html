@@ -1,8 +1,9 @@
-<form action="" id="startList">
-  <p>I want everyone to start with <input ng-change="updatePoints(points)" type="number" ng-model="points" id="starting-score" value="0" placeholder="0"/> points (max 999).</p>
-  <p>There are <input type="number" ng-change="updatePlayers(players)" id="players-value" ng-model="players" value="1"/> players (max 8).</p>
+<form action="" id="startList" novalidate>
+  <p>I want everyone to start with <input ng-change="updatePoints(points)" type="number" ng-model="points" id="starting-score" value="0" required placeholder="0"/> points (max 999).</p>
+  <p>There are <input type="number" ng-change="updatePlayers(players)" id="players-value" ng-model="players" required value="1"/> players (max 8).</p>
 </form>
-<a ng-click="pushObject()" href="#/scoreKeeper">Start</a>  
-
+<a ng-click="pushObject()" ng-show="init.points && init.players" href="#/scoreKeeper">Start</a>
+{{init.players}}
+{{init.points}}
 
 {{kak}}
