@@ -1,18 +1,24 @@
-angular.module('stApp').directive("ngMobileClick", [function () {
-  var myScopeFunction = function(){
-    alert('gr');
-  };
+angular.module('stApp').directive("ngMobileClick", function () {
 
-    return function (scope, elem, attrs) {
-        elem.bind("touchstart click", function (e) {
-            e.preventDefault();
-            e.stopPropagation();
+  return {
+    restrict: 'A',
+    link: function(scope, elem, attrs){
+      // elem.bind("touchstart click", function (e) {
+      //     e.preventDefault();
+      //     e.stopPropagation();
+      //     scope.$apply(attrs["ngMobileClick"]);
+      // });
 
-            scope.$apply(attrs["ngMobileClick"]);
-            var myScopeFunction = function(){
-              alert('gr3');
-            };
-        });
-    };
-}]);
+      elem.bind('touchstart click ',function(e){
+         alert('fe');
+         e.preventDefault();
+         e.stopPropagation();
+         alert('fe2');
+         scope.$apply(attrs["ngMobileClick"]);
+         alert('fe3');
+       });
+      console.log(elem,scope);
+    }
+  }
+});
 // And use like: ng-mobile-click="myScopeFunction()"
