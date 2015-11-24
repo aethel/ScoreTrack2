@@ -1,14 +1,18 @@
-angular.module('StApp'.directive('ngMobileClick', function(){
-  return {
-    restrict: 'A',
-    link: function(scope,element,attrs){
-      element.bind('touchstart', function(event){
-        event.preventDefault();
-        event.stopPropagation();
+angular.module('stApp').directive("ngMobileClick", [function () {
+  var myScopeFunction = function(){
+    alert('gr');
+  };
 
-        scope.$apply(attrs["ngMobileClick"]);
-      });
-    }
-  }
-});
+    return function (scope, elem, attrs) {
+        elem.bind("touchstart click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            scope.$apply(attrs["ngMobileClick"]);
+            var myScopeFunction = function(){
+              alert('gr3');
+            };
+        });
+    };
+}]);
 // And use like: ng-mobile-click="myScopeFunction()"
