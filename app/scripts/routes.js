@@ -15,10 +15,9 @@ angular.module('stApp')
         templateUrl: 'views/main.html',
         controller: 'MainCtrl as form'
       })
-
       .when('/scoreKeeper', {
         templateUrl: 'views/scoreKeeper.html',
         controller: 'ScoreCtrl as score'
-      })
+      })      
       .otherwise({redirectTo: '/'});
   }]);
