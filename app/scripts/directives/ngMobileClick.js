@@ -1,53 +1,67 @@
-angular.module('stApp').directive("ngMobileClick", function ($timeout) {
+angular.module('stApp').directive("ngMobileClick", function ($timeout,$interval) {
 
 	return {
 		restrict: 'A',
 		link: function(scope, elem, attrs){
-			// elem.bind("touchstart click", function (e) {
-			//     e.preventDefault();
-			//     e.stopPropagation();
-			//     scope.$apply(attrs["ngMobileClick"]);
-			// });
 
-//			elem.bind('touchstart mousedown',function(e){
-//				 alert('fe');
-//				 e.preventDefault();
-//				 e.stopPropagation();
-//				 alert('fe2');
-//				 scope.$apply(attrs["ngMobileClick"]);
-//				 alert('fe3');
-//			 });
-			// var held = false;
-			// console.log(held);
-      var timer;
-			elem.bind('mousedown',function(e){
-				console.log(e.target);
+			var timer,
+					interval;
+
+			elem.bind('mousedown touchstart',function(e){
 				var targetBtn = e.target;
+				timer = $timeout(function(){
+				}, 2000);
+				console.log(e.target.classList.contains("js-add-point"));
 
-			timer = $timeout(function(){
-					// held = true;
-					// console.log(held,'down');
-				}, 3000);
-        timer.then(function(){addPoints(targetBtn,10)}, function(){addPoints(targetBtn,1)});
-        // timer.then(
-        //   function(){console.log('fired');},
-        //   function(){console.log('rejecteddd');}
-        // );
+				e.target.classList.contains("js-add-point") ?
+						function(){
+										console.log('fd')
+						timer.then(function(){
+							interval = $interval(function(){addPoints(targetBtn,10)	},500);
+						}, function(){
+							addPoints(targetBtn,1);
+						});
+						}()
+				:
+					function(){
+						console.log('fddsd');
+						timer.then(function(){
+							interval = $interval(function(){subtractPoints(targetBtn,10)	},500);
+						}, function(){
+							subtractPoints(targetBtn,1);
+						});
+				}();
+
+
+//
+//				timer.then(function(){
+//					interval = $interval(function(){addPoints(targetBtn,10)	},500);
+//				}, function(){
+//					addPoints(targetBtn,1)
+//				});
 			 });
 
-			elem.bind('mouseup',function(e){
+			elem.bind('mouseup touchend',function(e){
 				var targetBtn = e.target;
 				// console.log(held, 'out');
-        $timeout.cancel(timer);
-        // held ? function(){return false}:addPoints(targetBtn,1);
-        });
+				$timeout.cancel(timer);
+				$interval.cancel(interval);
+				// held ? function(){return false}:addPoints(targetBtn,1);
+				});
+
 
 
 			var addPoints = function(targetBtn,valueAdded){
 				var value = parseInt(targetBtn.nextElementSibling.textContent);
 				var target = targetBtn.nextElementSibling;
-				console.log(target, 'target');
 				value = value + valueAdded;
+				target.textContent = value;
+			}
+
+			var subtractPoints = function(targetBtn,valueAdded){
+				var value = parseInt(targetBtn.previousElementSibling.textContent);
+				var target = targetBtn.previousElementSibling;
+				value = value - valueAdded;
 				target.textContent = value;
 			}
 
