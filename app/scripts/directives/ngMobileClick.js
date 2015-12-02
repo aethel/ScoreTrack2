@@ -17,30 +17,31 @@ angular.module('stApp').directive("ngMobileClick", function ($timeout) {
 //				 scope.$apply(attrs["ngMobileClick"]);
 //				 alert('fe3');
 //			 });
-			var held = false;
-			console.log(held);
-			var timer;
+			// var held = false;
+			// console.log(held);
+      var timer;
 			elem.bind('mousedown',function(e){
 				console.log(e.target);
 				var targetBtn = e.target;
 
-				timer = $timeout(function(){
-					held = true;
-					console.log(held,'down');
+			timer = $timeout(function(){
+					// held = true;
+					// console.log(held,'down');
 				}, 3000);
-
-				addPoints(targetBtn,10);
-
-
+        timer.then(function(){addPoints(targetBtn,10)}, function(){addPoints(targetBtn,1)});
+        // timer.then(
+        //   function(){console.log('fired');},
+        //   function(){console.log('rejecteddd');}
+        // );
 			 });
 
 			elem.bind('mouseup',function(e){
 				var targetBtn = e.target;
-				$timeout.cancel(timer);
-				held = false;
-				console.log(held, 'out');
-				addPoints(targetBtn,1);
-			 });
+				// console.log(held, 'out');
+        $timeout.cancel(timer);
+        // held ? function(){return false}:addPoints(targetBtn,1);
+        });
+
 
 			var addPoints = function(targetBtn,valueAdded){
 				var value = parseInt(targetBtn.nextElementSibling.textContent);
