@@ -9,15 +9,15 @@
  */
 angular.module('stApp')
 
-  .config(['$routeProvider', function($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl as form'
-      })
-      .when('/scoreKeeper', {
-        templateUrl: 'views/scoreKeeper.html',
-        controller: 'ScoreCtrl as score'
-      })      
-      .otherwise({redirectTo: '/'});
-  }]);
+	.config(['$routeProvider', function($routeProvider) {
+		$routeProvider
+			.when('/', {
+				templateUrl: 'views/main.html',
+				controller: 'MainCtrl as form'
+			})
+			.when('/scoreKeeper', {
+				templateUrl: 'views/scoreKeeper.html',
+				controller: 'ScoreCtrl as score'
+			})
+			.otherwise({redirectTo: '/'});
+	}]);
