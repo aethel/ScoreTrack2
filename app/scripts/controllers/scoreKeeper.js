@@ -9,9 +9,11 @@ angular.module('stApp').controller('ScoreCtrl', function($scope, InitData, $comp
 		 $scope.instructionsNeeded = false;
 	 })() : (function(){
 		 localStorage.setItem('secondLoad',true);
-
 	 })();
 
+	 $scope.toggleVisibility = function(){
+		 $scope.instructionsNeeded ? $scope.instructionsNeeded = false : $scope.instructionsNeeded = true;
+	 }
 
 	 var parent = angular.element(document.querySelector('.score-elements-list'));
 		var elem = '<li><score-item></score-item></li>';
