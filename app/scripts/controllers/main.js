@@ -12,7 +12,6 @@ angular.module('stApp')
 	var player = $scope.player;
 	var points = $scope.points;
 
-
  $scope.init = {};
 
  $scope.updatePoints = function(points){
@@ -29,4 +28,6 @@ angular.module('stApp')
  $scope.pushObject = function(){
 		InitData.setValue($scope.init);
  };
+
+
 });
