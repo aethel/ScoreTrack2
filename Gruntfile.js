@@ -44,6 +44,10 @@ module.exports = function (grunt) {
 				files: ['test/spec/{,*/}*.js'],
 				tasks: ['newer:jshint:test', 'karma']
 			},
+			sass: {
+				files: ['<%= yeoman.app %>/styles/sass/**/*.scss'],
+				tasks: ['sass']
+			},
 			styles: {
 				files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
 				tasks: ['newer:copy:styles', 'autoprefixer']
@@ -383,6 +387,14 @@ module.exports = function (grunt) {
 			unit: {
 				configFile: 'test/karma.conf.js',
 				singleRun: true
+			}
+		},
+
+	sass: {
+			dist: {
+				files: {
+					'<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/sass/main.scss'
+				}
 			}
 		}
 	});

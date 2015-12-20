@@ -1,0 +1,4 @@
+.score-elements-list {
+	@include container('column','no-wrap','space-between','stretch','stretch');
+	height: 90vmax;
+}
