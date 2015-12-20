@@ -103,20 +103,24 @@ input, select {
   width: 100vmin;
   height: 100vmax; }
 
+@media screen and (orientation: landscape) {
+  .container {
+    width: 100vmax;
+    height: 100vmin; } }
 .score-elements-list {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: "no-wrap";
-  -ms-flex-wrap: "no-wrap";
-  flex-wrap: "no-wrap";
-  -webkit-box-align: "stretch";
-  -moz-box-align: "stretch";
-  -webkit-align-items: "stretch";
-  -ms-flex-align: "stretch";
-  align-items: "stretch";
+  -webkit-flex-wrap: no-wrap;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-align: stretch;
   -moz-box-align: stretch;
   -webkit-align-items: stretch;
@@ -137,10 +141,58 @@ input, select {
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  list-style-type: none;
   height: 90vmax; }
 
+@media screen and (orientation: landscape) {
+  .score-elements-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: no-wrap;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch; } }
 .sl__list-item {
-  height: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
   outline: 1px solid red; }
+
+.overlay {
+  position: absolute;
+  top: 3rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=main.css.map */

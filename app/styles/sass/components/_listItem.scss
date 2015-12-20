@@ -1,4 +1,8 @@
 .sl__list-item{
-	height:100%;
+	@include item(1,1);
 	outline: 1px solid red;
+}
+
+@media screen and (orientation: landscape) {
+
 }

@@ -2,3 +2,11 @@
 	width: 100vmin;
 	height: 100vmax;
 }
+
+
+@media screen and (orientation: landscape) {
+	.container {
+		width: 100vmax;
+		height: 100vmin;
+	}
+}
