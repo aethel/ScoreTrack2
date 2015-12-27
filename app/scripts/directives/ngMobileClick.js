@@ -6,7 +6,7 @@ angular.module('stApp').directive('ngMobileClick', function($timeout, $interval)
 								link: function(scope, elem, attrs) {
 									var timer,
 											interval;
-										elem.bind('mousedown touchstart', function(e) {
+										elem.bind('touchstart', function(e) {
 												var targetBtn = e.target;
 												timer = $timeout(function() {}, 2000);
 												e.target.classList.contains('js-add-point') ?
@@ -30,7 +30,7 @@ angular.module('stApp').directive('ngMobileClick', function($timeout, $interval)
 														}();
 										});
 
-											elem.bind('mouseup touchend', function(e) {
+											elem.bind('touchend', function(e) {
 													var targetBtn = e.target;
 													$timeout.cancel(timer);
 													$interval.cancel(interval);
@@ -39,14 +39,14 @@ angular.module('stApp').directive('ngMobileClick', function($timeout, $interval)
 											var addPoints = function(targetBtn, valueAdded) {
 													var value = parseInt(targetBtn.nextElementSibling.textContent);
 													var target = targetBtn.nextElementSibling;
-													value = value + valueAdded;
+													value += valueAdded;
 													target.textContent = value;
 											};
 
 											var subtractPoints = function(targetBtn, valueAdded) {
 													var value = parseInt(targetBtn.previousElementSibling.textContent);
 													var target = targetBtn.previousElementSibling;
-													value = value - valueAdded;
+													value -= valueAdded;
 													target.textContent = value;
 											};
 
