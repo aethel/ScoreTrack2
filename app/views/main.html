@@ -1,5 +1,19 @@
 <form action="" id="startList" novalidate>
-  <p>I want everyone to start with <input ng-change="updatePoints(points)" type="number" ng-model="points" id="starting-score" value="0" required placeholder="0"/> points (max 999).</p>
-  <p>There are <input type="number" ng-change="updatePlayers(players)" id="players-value" ng-model="players" required value="1"/> players (max 8).</p>
+	<div class="form-input">
+		<header>
+			<h2>Initial Points</h2>
+		</header>
+		<div class="hex-field--points">
+			<input ng-change="updatePoints(points)" type="number" ng-model="points" id="starting-score" value="0" required placeholder="0 (max 999)"/>
+		</div>
+	</div>
+	<div class="form-input">
+		<header>
+			<h2>No of Players (max 8)</h2>
+		</header>
+		<div class="hex-field--players">
+			<input type="number" ng-change="updatePlayers(players)" id="players-value" ng-model="players" required value="1"/>
+		</div>
+	</div>
 </form>
 <a ng-click="pushObject()" ng-show="init.points >= 0 && init.players" ng-href="#/scoreKeeper">Start</a>

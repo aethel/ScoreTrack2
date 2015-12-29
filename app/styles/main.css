@@ -195,4 +195,55 @@ input, select {
   left: 0;
   background: rgba(0, 0, 0, 0.5); }
 
+.hex-field--points {
+  display: block;
+  width: 50vw;
+  height: 30vw;
+  background: #ff00ff;
+  position: relative;
+  margin: 14vw 0 0 0; }
+.hex-field--points::before, .hex-field--points::after {
+  content: '';
+  border-left: 25vw solid transparent;
+  border-right: 25vw solid transparent;
+  position: absolute;
+  width: 0; }
+.hex-field--points::before {
+  bottom: 100%;
+  border-bottom: 14vw solid #ff00ff; }
+.hex-field--points::after {
+  top: 100%;
+  border-top: 14vw solid #ff00ff; }
+
+.hex-field--players {
+  display: block;
+  width: 50vw;
+  height: 30vw;
+  background: #00ffff;
+  position: relative;
+  margin: 14vw 0 0 0; }
+.hex-field--players::before, .hex-field--players::after {
+  content: '';
+  border-left: 25vw solid transparent;
+  border-right: 25vw solid transparent;
+  position: absolute;
+  width: 0; }
+.hex-field--players::before {
+  bottom: 100%;
+  border-bottom: 14vw solid #00ffff; }
+.hex-field--players::after {
+  top: 100%;
+  border-top: 14vw solid #00ffff; }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+input[type=number] {
+  width: 100%;
+  background: none;
+  -moz-appearance: textfield;
+  border: none;
+  border-bottom: 2px solid red; }
+
 /*# sourceMappingURL=main.css.map */
