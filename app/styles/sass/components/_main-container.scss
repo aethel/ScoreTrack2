@@ -1,6 +1,12 @@
 .container {
 	width: 100vmin;
 	height: 100vmax;
+//	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0tMiAxMEwxMCAtMlpNMTAgNkw2IDEwWk0tMiAyTDIgLTIiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIxLjUiPjwvcGF0aD4KPC9zdmc+");
+//	background-color: #999;
+}
+
+#startList {
+	@include container(column,no-wrap,space-between,center,stretch);
 }
 
 @media screen and (orientation: landscape) {
@@ -8,4 +14,9 @@
 		width: 100vmax;
 		height: 100vmin;
 	}
+
+	#startList {
+		@include container(row,no-wrap,space-between,center,stretch);
+	}
+
 }
