@@ -99,9 +99,46 @@ input, select {
 * $base: number with a unit (% or px) - OPTIONAL, default value provided
 * $order: unitless number - OPTIONAL, default value provided
 */
+body {
+  font-family: 'Quicksand', Arial,sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  color: #fff;
+  font-weight: normal; }
+
+h2, .h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: normal; }
+
 .container {
   width: 100vmin;
-  height: 100vmax; }
+  height: 100vmax;
+  background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent; }
+  .container:after {
+    position: absolute;
+    content: '';
+    background: rgba(70, 70, 70, 0.46);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; }
+  .container:before {
+    position: absolute;
+    content: '';
+    background: url(../../../images/pattern.png) repeat left top transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.11;
+    z-index: 2; }
+
+.view-wrapper,
+.main-header {
+  position: relative;
+  z-index: 3; }
 
 #startList {
   display: -webkit-box;
@@ -141,7 +178,8 @@ input, select {
 @media screen and (orientation: landscape) {
   .container {
     width: 100vmax;
-    height: 100vmin; }
+    height: 100vmin;
+    background: url(../../../images/bg-small.png) no-repeat 6% 8%/120% auto transparent; }
 
   #startList {
     display: -webkit-box;
@@ -177,6 +215,11 @@ input, select {
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
     align-content: stretch; } }
+.main-header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 0.5rem 0 0 0; }
+
 .score-elements-list {
   display: -webkit-box;
   display: -moz-box;
@@ -266,44 +309,46 @@ input, select {
   background: rgba(0, 0, 0, 0.5); }
 
 .hex-field--points {
-  display: block;
-  width: 50vw;
-  height: 30vw;
-  background: #ff00ff;
-  position: relative;
-  margin: 14vw 0 0 0; }
-.hex-field--points::before, .hex-field--points::after {
-  content: '';
-  border-left: 25vw solid transparent;
-  border-right: 25vw solid transparent;
-  position: absolute;
-  width: 0; }
-.hex-field--points::before {
-  bottom: 100%;
-  border-bottom: 14vw solid #ff00ff; }
-.hex-field--points::after {
-  top: 100%;
-  border-top: 14vw solid #ff00ff; }
+  margin: 14vw auto 0 auto; }
+  .hex-field--points {
+    display: block;
+    width: 50vw;
+    height: 30vw;
+    background: #ff00ff;
+    position: relative; }
+  .hex-field--points::before, .hex-field--points::after {
+    content: '';
+    border-left: 25vw solid transparent;
+    border-right: 25vw solid transparent;
+    position: absolute;
+    width: 0; }
+  .hex-field--points::before {
+    bottom: 100%;
+    border-bottom: 14vw solid #ff00ff; }
+  .hex-field--points::after {
+    top: 100%;
+    border-top: 14vw solid #ff00ff; }
 
 .hex-field--players {
-  display: block;
-  width: 50vw;
-  height: 30vw;
-  background: #00ffff;
-  position: relative;
-  margin: 14vw 0 0 0; }
-.hex-field--players::before, .hex-field--players::after {
-  content: '';
-  border-left: 25vw solid transparent;
-  border-right: 25vw solid transparent;
-  position: absolute;
-  width: 0; }
-.hex-field--players::before {
-  bottom: 100%;
-  border-bottom: 14vw solid #00ffff; }
-.hex-field--players::after {
-  top: 100%;
-  border-top: 14vw solid #00ffff; }
+  margin: 14vw auto 0 auto; }
+  .hex-field--players {
+    display: block;
+    width: 50vw;
+    height: 30vw;
+    background: #00ffff;
+    position: relative; }
+  .hex-field--players::before, .hex-field--players::after {
+    content: '';
+    border-left: 25vw solid transparent;
+    border-right: 25vw solid transparent;
+    position: absolute;
+    width: 0; }
+  .hex-field--players::before {
+    bottom: 100%;
+    border-bottom: 14vw solid #00ffff; }
+  .hex-field--players::after {
+    top: 100%;
+    border-top: 14vw solid #00ffff; }
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -317,9 +362,14 @@ input[type=number] {
   border-bottom: 2px solid red; }
 
 .form-input {
-  margin: 14vw 0; }
+  margin: 14vw 0 0 0; }
 
 .fi__header {
-  text-align: center; }
+  text-align: center;
+  margin: 0 0 1rem 0; }
+
+.si__initials {
+  width: 2rem;
+  display: block; }
 
 /*# sourceMappingURL=main.css.map */

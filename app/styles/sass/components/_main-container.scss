@@ -1,9 +1,38 @@
 .container {
 	width: 100vmin;
 	height: 100vmax;
-//	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0tMiAxMEwxMCAtMlpNMTAgNkw2IDEwWk0tMiAyTDIgLTIiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIxLjUiPjwvcGF0aD4KPC9zdmc+");
-//	background-color: #999;
+	background: url(../../../images/bg-small.png) no-repeat 22% center / cover transparent;
+
+	&:after {
+		position: absolute;
+		content:'';
+		background: rgba(70,70,70,0.46);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+	&:before {
+		position: absolute;
+		content:'';
+		background: url(../../../images/pattern.png) repeat left top transparent;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity:0.11;
+		z-index: 2;
+	}
 }
+
+.view-wrapper,
+.main-header {
+	position: relative;
+	z-index: 3;
+}
+
 
 #startList {
 	@include container(column,no-wrap,space-between,center,stretch);
@@ -13,6 +42,7 @@
 	.container {
 		width: 100vmax;
 		height: 100vmin;
+		background: url(../../../images/bg-small.png) no-repeat 6% 8%/120% auto transparent;
 	}
 
 	#startList {

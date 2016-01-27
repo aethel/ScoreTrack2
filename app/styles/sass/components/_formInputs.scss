@@ -1,9 +1,11 @@
 .hex-field--points{
 	@include hexagon(#ff00ff);
+	margin:14vw auto 0 auto;
 }
 
 .hex-field--players{
 	@include hexagon(#00ffff);
+	margin:14vw auto 0 auto;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -20,9 +22,10 @@ input[type=number] {
 }
 
 .form-input {
-	margin:14vw 0;
+	margin:14vw 0 0 0;
 }
 
 .fi__header {
 	text-align: center;
+	margin:0 0 1rem 0;
 }

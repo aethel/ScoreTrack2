@@ -9,20 +9,17 @@ angular.module('stApp').directive('scoreItem', function($timeout){
 		link: function(scope,element,attr,ngModel){
 			scope.init.points <= 999 ? scope.initPoints = scope.init.points : scope.initPoints = 999;
 
-
-			var inputBox = element.find('input');
-			inputBox.bind('input',function(e){
-				console.log(e.target);
-				console.log(e.target.value);
-				console.log(scope.initials);
-			});
-
-
-//			scope.$apply(function(){
+//			var items = document.querySelectorAll('score-item');
+//			console.log(items.length);
+//			for(var i=0; i<items.length; i++){
+//				var item = items[i];
+//				var initialsBox = item.querySelector('.si__initials');
+//				console.log(initialsBox,'initbox');
+//				var content =+ i;
 //
-//				ngModel.$setViewValue('feck');
-//			});
-//			console.log(ngModel);
+//				initialsBox.textContent = content;
+//			}
+
 
 		}
 	};
