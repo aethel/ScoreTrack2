@@ -1,7 +1,10 @@
 .container {
 	width: 100vmin;
-	height: 100vmax;
+	min-height: 100vmax;
+	height:auto;
 	background: url(../../../images/bg-small.png) no-repeat 22% center / cover transparent;
+	transform-style: preserve-3d;
+	transition:all 1s;
 
 	&:after {
 		position: absolute;

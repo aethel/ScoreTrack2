@@ -113,8 +113,11 @@ h2, .h2 {
 
 .container {
   width: 100vmin;
-  height: 100vmax;
-  background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent; }
+  min-height: 100vmax;
+  height: auto;
+  background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent;
+  transform-style: preserve-3d;
+  transition: all 1s; }
   .container:after {
     position: absolute;
     content: '';
@@ -310,7 +313,7 @@ h2, .h2 {
 
 .hex-field--points,
 .hex-field--players {
-  margin: 14vw auto 0 auto;
+  margin: 7vw auto 14vw auto;
   border-left: 0.15rem solid #fff;
   border-right: 0.15rem solid #fff;
   box-sizing: border-box; }
@@ -355,16 +358,19 @@ input[type=number] {
   background: none;
   -moz-appearance: textfield;
   border: none;
-  border-bottom: 2px solid red;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  font-size: 4.5rem;
+  text-align: center;
+  color: #fff;
+  font-family: "Quicksand", Arial, sans-serif; }
 
 .form-input {
-  margin: 14vw 0 0 0; }
+  margin: 6vw 0 7vw 0; }
 
 .fi__header {
   text-align: center;
-  margin: 0 0 1rem 0; }
+  margin: 0 0 3rem 0; }
 
 .si__initials {
   width: 2rem;
