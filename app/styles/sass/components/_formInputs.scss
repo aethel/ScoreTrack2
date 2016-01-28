@@ -1,12 +1,12 @@
-.hex-field--points{
-	@include hexagon(#ff00ff);
+.hex-field--points,
+.hex-field--players{
+	@include hexagon(transparent, #fff);
 	margin:14vw auto 0 auto;
+	border-left:0.15rem solid #fff;
+	border-right:0.15rem solid #fff;
+	box-sizing:border-box;
 }
 
-.hex-field--players{
-	@include hexagon(#00ffff);
-	margin:14vw auto 0 auto;
-}
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -19,6 +19,8 @@ input[type=number] {
 	-moz-appearance:textfield;
 	border:none;
 	border-bottom:2px solid red;
+	position: relative;
+	z-index: 1;
 }
 
 .form-input {

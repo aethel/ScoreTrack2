@@ -1,4 +1,4 @@
-@mixin hexagon($colour){
+@mixin hexagon($colour, $borderColour:null){
 	& {
 		display: block;
 		width: 50vw;
@@ -10,19 +10,35 @@
 	&::before,
 	&::after{
 		content:'';
-		border-left:25vw solid transparent;
-		border-right:25vw solid transparent;
+//		border-left:25vw solid transparent;
+//		border-right:25vw solid transparent;
 		position: absolute;
-		width: 0;
+		-webkit-transform: scale(0.71,0.377) rotate(-45deg);
+		transform: scale(0.71,0.377) rotate(-45deg);
+		position: absolute;
+		width: 50vw;
+		height: 50vw;
+		left: 50%;
+		margin-left: -25vw;
+		background: $colour;
+		box-sizing:border-box;
+//		position: absolute;
+//width: 50.8vw;
+//height: 50vw;
+//left: 50%;
+//margin-left: -25.4vw;
+
 	}
 
 	&::before {
-		bottom: 100%;
-		border-bottom:14vw solid $colour;
+		bottom: 16%;
+		border-top:0.2rem solid $borderColour;
+		border-right:0.2rem solid $borderColour;
 	}
 
 	&::after {
-		top: 100%;
-		border-top:14vw solid $colour;
+		top: 17%;
+		border-bottom:0.2rem solid $borderColour;
+		border-left:0.2rem solid $borderColour;
 	}
 }
