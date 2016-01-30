@@ -1,6 +1,6 @@
 .container {
 	width: 100vmin;
-	min-height: 100vmax;
+	min-height: 100vh;
 	height:auto;
 	background: url(../../../images/bg-small.png) no-repeat 22% center / cover transparent;
 	transform-style: preserve-3d;
@@ -44,12 +44,12 @@
 @media screen and (orientation: landscape) {
 	.container {
 		width: 100vmax;
-		height: 100vmin;
+		height: 100vh;
 		background: url(../../../images/bg-small.png) no-repeat 6% 8%/120% auto transparent;
 	}
 
 	#startList {
-		@include container(row,no-wrap,space-between,center,stretch);
+		@include container(row,no-wrap,space-around,center,stretch);
 	}
 
 }

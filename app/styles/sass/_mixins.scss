@@ -1,8 +1,8 @@
-@mixin hexagon($colour, $borderColour:null){
+@mixin hexagon($scale,$colour, $borderColour:null){
 	& {
 		display: block;
-		width: 50vw;
-		height: 30vw;
+		width: $scale*50vw;
+		height: $scale*30vw;
 		background: $colour;
 		position: relative;
 	}
@@ -14,10 +14,10 @@
 		-webkit-transform: scale(0.71,0.377) rotate(-45deg);
 		transform: scale(0.71,0.377) rotate(-45deg);
 		position: absolute;
-		width: 50vw;
-		height: 50vw;
+		width: $scale*50vw;
+		height: $scale*50vw;
 		left: 50%;
-		margin-left: -25vw;
+		margin-left: $scale*(-25vw);
 		background: $colour;
 		box-sizing:border-box;
 	}

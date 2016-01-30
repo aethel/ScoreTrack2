@@ -113,7 +113,7 @@ h2, .h2 {
 
 .container {
   width: 100vmin;
-  min-height: 100vmax;
+  min-height: 100vh;
   height: auto;
   background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent;
   transform-style: preserve-3d;
@@ -181,7 +181,7 @@ h2, .h2 {
 @media screen and (orientation: landscape) {
   .container {
     width: 100vmax;
-    height: 100vmin;
+    height: 100vh;
     background: url(../../../images/bg-small.png) no-repeat 6% 8%/120% auto transparent; }
 
   #startList {
@@ -212,16 +212,18 @@ h2, .h2 {
     flex-direction: row;
     -webkit-box-pack: justify;
     -moz-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
     align-content: stretch; } }
-.main-header h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  padding: 0.5rem 0 0 0; }
+.main-header {
+  margin: 0 0 1rem 0; }
+  .main-header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0.5rem 0 0 0; }
 
 .score-elements-list {
   display: -webkit-box;
@@ -313,15 +315,15 @@ h2, .h2 {
 
 .hex-field--points,
 .hex-field--players {
-  margin: 7vw auto 14vw auto;
+  margin: 9vw auto 10vw auto;
   border-left: 0.15rem solid #fff;
   border-right: 0.15rem solid #fff;
   box-sizing: border-box; }
   .hex-field--points,
   .hex-field--players {
     display: block;
-    width: 50vw;
-    height: 30vw;
+    width: 30vw;
+    height: 18vw;
     background: transparent;
     position: relative; }
   .hex-field--points::before, .hex-field--points::after,
@@ -332,10 +334,10 @@ h2, .h2 {
     -webkit-transform: scale(0.71, 0.377) rotate(-45deg);
     transform: scale(0.71, 0.377) rotate(-45deg);
     position: absolute;
-    width: 50vw;
-    height: 50vw;
+    width: 30vw;
+    height: 30vw;
     left: 50%;
-    margin-left: -25vw;
+    margin-left: -15vw;
     background: transparent;
     box-sizing: border-box; }
   .hex-field--points::before,
@@ -363,15 +365,58 @@ input[type=number] {
   font-size: 4.5rem;
   text-align: center;
   color: #fff;
-  font-family: "Quicksand", Arial, sans-serif; }
+  font-family: "Quicksand", Arial, sans-serif;
+  height: 80%; }
 
 .form-input {
   margin: 6vw 0 7vw 0; }
 
 .fi__header {
   text-align: center;
-  margin: 0 0 3rem 0; }
+  margin: 0 0 2rem 0; }
 
+@media screen and (orientation: landscape) {
+  .hex-field--points,
+  .hex-field--players {
+    box-sizing: border-box; }
+    .hex-field--points,
+    .hex-field--players {
+      display: block;
+      width: 20vw;
+      height: 12vw;
+      background: transparent;
+      position: relative; }
+    .hex-field--points::before, .hex-field--points::after,
+    .hex-field--players::before,
+    .hex-field--players::after {
+      content: '';
+      position: absolute;
+      -webkit-transform: scale(0.71, 0.377) rotate(-45deg);
+      transform: scale(0.71, 0.377) rotate(-45deg);
+      position: absolute;
+      width: 20vw;
+      height: 20vw;
+      left: 50%;
+      margin-left: -10vw;
+      background: transparent;
+      box-sizing: border-box; }
+    .hex-field--points::before,
+    .hex-field--players::before {
+      bottom: 16%;
+      border-top: 0.2rem solid #fff;
+      border-right: 0.2rem solid #fff; }
+    .hex-field--points::after,
+    .hex-field--players::after {
+      top: 17%;
+      border-bottom: 0.2rem solid #fff;
+      border-left: 0.2rem solid #fff; }
+
+  .form-input {
+    margin: 3vw 0 3vw 0; }
+
+  .hex-field--points,
+  .hex-field--players {
+    margin: 4vw auto 10vw auto; } }
 .si__initials {
   width: 2rem;
   display: block; }
