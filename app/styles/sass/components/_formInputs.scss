@@ -1,63 +1,63 @@
 
 .hex-field--points,
 .hex-field--players{
-    @include hexagon(0.6,transparent, #fff);
-    margin:9vw auto 10vw auto;
-    border-left:0.13rem solid #fff;
-    border-right:0.13rem solid #fff;
-    box-sizing:border-box;
+		@include hexagon(0.6,transparent, #fff);
+		margin:9vw auto 10vw auto;
+		border-left:0.13rem solid #fff;
+		border-right:0.13rem solid #fff;
+		box-sizing:border-box;
 
 }
 
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+		-webkit-appearance: none;
 }
 
 input[type=number] {
-    width:100%;
-    background:none;
-    -moz-appearance:textfield;
-    border:none;
-    position: relative;
-    z-index: 1;
-    font-size: 9vh;
-    text-align: center;
-    color: #fff;
-    font-family:$defaultFont;
-    height:80%;
+		width:100%;
+		background:none;
+		-moz-appearance:textfield;
+		border:none;
+		position: relative;
+		z-index: 1;
+		font-size: 9vh;
+		text-align: center;
+		color: #fff;
+		font-family:$defaultFont;
+		height:80%;
 }
 
 .form-input {
-    margin:6vw 0 7vw 0;
+		margin:2vw 0 4vw 0;
 }
 
 .fi__header {
-    text-align: center;
-    margin:0 0 3rem 0;
+		text-align: center;
+		margin:0 0 3rem 0;
 }
 
 
 @media screen and (orientation: landscape) {
-    .hex-field--points,
-    .hex-field--players{
-        @include hexagon(0.4,transparent, #fff);
-        box-sizing:border-box;
-    }
+		.hex-field--points,
+		.hex-field--players{
+				@include hexagon(0.4,transparent, #fff);
+				box-sizing:border-box;
+		}
 
-    input[type=number] {
-        font-size:15vh;    
-    }
-    
-    .form-input {
-        margin:3vw 0 3vw 0;
-    }
+		input[type=number] {
+				font-size:15vh;
+		}
 
-    .hex-field--points,
-    .hex-field--players{
-        margin:4vw auto 10vw auto;
+		.form-input {
+				margin:3vw 0 3vw 0;
+		}
 
-    }
+		.hex-field--points,
+		.hex-field--players{
+				margin:4vw auto 10vw auto;
+
+		}
 
 }

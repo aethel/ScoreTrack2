@@ -369,7 +369,7 @@ input[type=number] {
   height: 80%; }
 
 .form-input {
-  margin: 6vw 0 7vw 0; }
+  margin: 2vw 0 4vw 0; }
 
 .fi__header {
   text-align: center;
@@ -424,40 +424,56 @@ input[type=number] {
   width: 2rem;
   display: block; }
 
-.btn-default {
-  font-size: 3vw;
+.btn-default--hex {
+  font-size: 4vw;
   color: white;
   text-align: center;
   text-decoration: none;
-  padding: 2vh 5vw;
-  outline: 1px solid red;
+  padding: 2.5vw 5vw;
+  border-top: solid 0.1rem #fff;
+  border-bottom: solid 0.1rem #fff;
   text-transform: uppercase;
   position: relative; }
-  .btn-default {
-    display: block;
-    width: 50vw;
-    height: 30vw;
+  .btn-default--hex {
+    display: inline-block;
     background: transparent;
     position: relative; }
-  .btn-default::before, .btn-default::after {
+  .btn-default--hex::before, .btn-default--hex::after {
     content: '';
     position: absolute;
-    -webkit-transform: scale(0.71, 0.377) rotate(-45deg);
-    transform: scale(0.71, 0.377) rotate(-45deg);
+    -webkit-transform: scale(0.31, 0.74) rotate(45deg);
+    transform: scale(0.31, 0.74) rotate(45deg);
     position: absolute;
-    width: 50vw;
-    height: 50vw;
-    left: 50%;
-    margin-left: -25vw;
+    width: 9vw;
+    height: 9vw;
     background: transparent;
-    box-sizing: border-box; }
-  .btn-default::before {
-    bottom: 16%;
-    border-top: 0.2rem solid #fff;
-    border-right: 0.2rem solid #fff; }
-  .btn-default::after {
-    top: 17%;
-    border-bottom: 0.2rem solid #fff;
-    border-left: 0.2rem solid #fff; }
+    box-sizing: border-box;
+    top: 0; }
+  .btn-default--hex::before {
+    right: -4.4vw;
+    border-top: 0.15rem solid #fff;
+    border-right: 0.15rem solid #fff; }
+  .btn-default--hex::after {
+    left: -4.4vw;
+    border-bottom: 0.15rem solid #fff;
+    border-left: 0.15rem solid #fff; }
+
+.view-wrapper #startList + .btn-default--hex {
+  position: absolute;
+  left: 50%;
+  top: auto;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  bottom: -10%; }
+@media screen and (orientation: landscape) {
+  .view-wrapper #startList + .btn-default--hex {
+    position: absolute;
+    left: 50%;
+    top: auto;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    bottom: 10%; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -37,10 +37,8 @@
 
 
 @mixin makeHex($rotate,$scale,$colour, $borderColour:null) {
-    	& {
-		display: block;
-		width: $scale*50vw;
-		height: $scale*30vw;
+	& {
+		display: inline-block;
 		background: $colour;
 		position: relative;
 	}
@@ -49,15 +47,54 @@
 	&::after{
 		content:'';
 		position: absolute;
-		-webkit-transform: scale(0.71,0.377) rotate(-45deg);
-		transform: scale(0.71,0.377) rotate(-45deg);
+		-webkit-transform: scale(0.31,0.74) rotate($rotate);
+		transform: scale(0.31,0.74) rotate($rotate);
 		position: absolute;
-		width: $scale*50vw;
-		height: $scale*50vw;
-		left: 50%;
-		margin-left: $scale*(-25vw);
+		width: $scale*1vw;
+		height: $scale*1vw;
 		background: $colour;
 		box-sizing:border-box;
+		top:0;
 	}
 
+
+	&::before {
+		right:-4.4vw;
+		border-top:0.15rem solid $borderColour;
+		border-right:0.15rem solid $borderColour;
+	}
+
+	&::after {
+		left:-4.4vw;
+		border-bottom:0.15rem solid $borderColour;
+		border-left:0.15rem solid $borderColour;
+	}
 }
+
+@mixin centringVH($x,$y, $zindex:null) {
+$ty: null;
+$tx: null;
+
+	@if $y == auto {
+		$ty:0;
+	} @else if $x == auto {
+		$tx:0;
+	}
+
+	@if $y != auto {
+		$ty: $y;
+	} @else if $x != auto {
+		$tx: $x;
+	}
+
+	position: absolute;
+	left: $x;
+	top: $y;
+	-webkit-transform:translate(-$tx,-$ty);
+		-ms-transform:translate(-$tx,-$ty);
+			transform:translate(-$tx,-$ty);
+				z-index: $zindex;
+
+
+
+				}

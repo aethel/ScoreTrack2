@@ -1,12 +1,30 @@
-.btn-default {
-@include hexagon(1,transparent, #fff);
-    
-	font-size: 3vw;
+.btn-default--hex {
+	@include makeHex(45deg,9,transparent, #fff);
+
+	font-size: 4vw;
 	color: rgb(255, 255, 255);
 	text-align: center;
 	text-decoration: none;
-	padding: 2vh 5vw;
-	outline: 1px solid red;
-    text-transform: uppercase;
-    position: relative;
+	padding: 2.5vw 5vw;
+	border-top: solid 0.1rem #fff;
+	border-bottom: solid 0.1rem #fff;
+	text-transform: uppercase;
+	position: relative;
 }
+
+.view-wrapper {
+	#startList + .btn-default--hex {
+		@include centringVH(50%,auto);
+		bottom:-10%;
+	}
+
+	@media screen and (orientation:landscape) {
+		#startList + .btn-default--hex {
+			@include centringVH(50%,auto);
+			bottom:10%;
+		}
+	}
+
+}
+
+
