@@ -3,8 +3,8 @@
 .hex-field--players{
     @include hexagon(0.6,transparent, #fff);
     margin:9vw auto 10vw auto;
-    border-left:0.15rem solid #fff;
-    border-right:0.15rem solid #fff;
+    border-left:0.13rem solid #fff;
+    border-right:0.13rem solid #fff;
     box-sizing:border-box;
 
 }
@@ -22,7 +22,7 @@ input[type=number] {
     border:none;
     position: relative;
     z-index: 1;
-    font-size: 4.5rem;
+    font-size: 9vh;
     text-align: center;
     color: #fff;
     font-family:$defaultFont;
@@ -35,7 +35,7 @@ input[type=number] {
 
 .fi__header {
     text-align: center;
-    margin:0 0 2rem 0;
+    margin:0 0 3rem 0;
 }
 
 
@@ -46,6 +46,10 @@ input[type=number] {
         box-sizing:border-box;
     }
 
+    input[type=number] {
+        font-size:15vh;    
+    }
+    
     .form-input {
         margin:3vw 0 3vw 0;
     }

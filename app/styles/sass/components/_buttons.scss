@@ -1,0 +1,12 @@
+.btn-default {
+@include hexagon(1,transparent, #fff);
+    
+	font-size: 3vw;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-decoration: none;
+	padding: 2vh 5vw;
+	outline: 1px solid red;
+    text-transform: uppercase;
+    position: relative;
+}

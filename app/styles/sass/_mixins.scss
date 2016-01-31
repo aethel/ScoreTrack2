@@ -34,3 +34,30 @@
 		border-left:0.2rem solid $borderColour;
 	}
 }
+
+
+@mixin makeHex($rotate,$scale,$colour, $borderColour:null) {
+    	& {
+		display: block;
+		width: $scale*50vw;
+		height: $scale*30vw;
+		background: $colour;
+		position: relative;
+	}
+
+	&::before,
+	&::after{
+		content:'';
+		position: absolute;
+		-webkit-transform: scale(0.71,0.377) rotate(-45deg);
+		transform: scale(0.71,0.377) rotate(-45deg);
+		position: absolute;
+		width: $scale*50vw;
+		height: $scale*50vw;
+		left: 50%;
+		margin-left: $scale*(-25vw);
+		background: $colour;
+		box-sizing:border-box;
+	}
+
+}
