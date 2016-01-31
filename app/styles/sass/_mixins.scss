@@ -23,7 +23,7 @@
 	}
 
 	&::before {
-		bottom: 16%;
+		bottom: 16.5%;
 		border-top:0.2rem solid $borderColour;
 		border-right:0.2rem solid $borderColour;
 	}
@@ -41,14 +41,15 @@
 		display: inline-block;
 		background: $colour;
 		position: relative;
+		box-sizing:border-box;
 	}
 
 	&::before,
 	&::after{
 		content:'';
 		position: absolute;
-		-webkit-transform: scale(0.31,0.74) rotate($rotate);
-		transform: scale(0.31,0.74) rotate($rotate);
+		-webkit-transform: scale(0.31,0.77) rotate($rotate);
+		transform: scale(0.31,0.77) rotate($rotate);
 		position: absolute;
 		width: $scale*1vw;
 		height: $scale*1vw;
@@ -59,13 +60,13 @@
 
 
 	&::before {
-		right:-4.4vw;
+		right:-4.6vw;
 		border-top:0.15rem solid $borderColour;
 		border-right:0.15rem solid $borderColour;
 	}
 
 	&::after {
-		left:-4.4vw;
+		left:-4.6vw;
 		border-bottom:0.15rem solid $borderColour;
 		border-left:0.15rem solid $borderColour;
 	}

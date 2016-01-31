@@ -3,8 +3,8 @@
 .hex-field--players{
 		@include hexagon(0.6,transparent, #fff);
 		margin:9vw auto 10vw auto;
-		border-left:0.13rem solid #fff;
-		border-right:0.13rem solid #fff;
+		border-left:0.11rem solid #fff;
+		border-right:0.11rem solid #fff;
 		box-sizing:border-box;
 
 }
@@ -42,7 +42,7 @@ input[type=number] {
 @media screen and (orientation: landscape) {
 		.hex-field--points,
 		.hex-field--players{
-				@include hexagon(0.4,transparent, #fff);
+				@include hexagon(0.5,transparent, #fff);
 				box-sizing:border-box;
 		}
 

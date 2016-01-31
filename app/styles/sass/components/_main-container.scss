@@ -3,8 +3,7 @@
 	min-height: 100vh;
 	height:auto;
 	background: url(../../../images/bg-small.png) no-repeat 22% center / cover transparent;
-	transform-style: preserve-3d;
-	transition:all 1s;
+
 
 	&:after {
 		position: absolute;
@@ -45,7 +44,7 @@
 	.container {
 		width: 100vmax;
 		height: 100vh;
-		background: url(../../../images/bg-small.png) no-repeat 6% 8%/120% auto transparent;
+		background: url(../../../images/bg-small.png) no-repeat 6% 8%/cover auto transparent;
 	}
 
 	#startList {

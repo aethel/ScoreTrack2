@@ -115,9 +115,7 @@ h2, .h2 {
   width: 100vmin;
   min-height: 100vh;
   height: auto;
-  background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent;
-  transform-style: preserve-3d;
-  transition: all 1s; }
+  background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent; }
   .container:after {
     position: absolute;
     content: '';
@@ -182,7 +180,7 @@ h2, .h2 {
   .container {
     width: 100vmax;
     height: 100vh;
-    background: url(../../../images/bg-small.png) no-repeat 6% 8%/120% auto transparent; }
+    background: url(../../../images/bg-small.png) no-repeat 6% 8%/cover auto transparent; }
 
   #startList {
     display: -webkit-box;
@@ -316,8 +314,8 @@ h2, .h2 {
 .hex-field--points,
 .hex-field--players {
   margin: 9vw auto 10vw auto;
-  border-left: 0.13rem solid #fff;
-  border-right: 0.13rem solid #fff;
+  border-left: 0.11rem solid #fff;
+  border-right: 0.11rem solid #fff;
   box-sizing: border-box; }
   .hex-field--points,
   .hex-field--players {
@@ -342,7 +340,7 @@ h2, .h2 {
     box-sizing: border-box; }
   .hex-field--points::before,
   .hex-field--players::before {
-    bottom: 16%;
+    bottom: 16.5%;
     border-top: 0.2rem solid #fff;
     border-right: 0.2rem solid #fff; }
   .hex-field--points::after,
@@ -382,8 +380,8 @@ input[type=number] {
     .hex-field--points,
     .hex-field--players {
       display: block;
-      width: 20vw;
-      height: 12vw;
+      width: 25vw;
+      height: 15vw;
       background: transparent;
       position: relative; }
     .hex-field--points::before, .hex-field--points::after,
@@ -394,15 +392,15 @@ input[type=number] {
       -webkit-transform: scale(0.71, 0.377) rotate(-45deg);
       transform: scale(0.71, 0.377) rotate(-45deg);
       position: absolute;
-      width: 20vw;
-      height: 20vw;
+      width: 25vw;
+      height: 25vw;
       left: 50%;
-      margin-left: -10vw;
+      margin-left: -12.5vw;
       background: transparent;
       box-sizing: border-box; }
     .hex-field--points::before,
     .hex-field--players::before {
-      bottom: 16%;
+      bottom: 16.5%;
       border-top: 0.2rem solid #fff;
       border-right: 0.2rem solid #fff; }
     .hex-field--points::after,
@@ -429,20 +427,22 @@ input[type=number] {
   color: white;
   text-align: center;
   text-decoration: none;
-  padding: 2.5vw 5vw;
+  padding: 2.45vw 5vw;
   border-top: solid 0.1rem #fff;
   border-bottom: solid 0.1rem #fff;
   text-transform: uppercase;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
   .btn-default--hex {
     display: inline-block;
     background: transparent;
-    position: relative; }
+    position: relative;
+    box-sizing: border-box; }
   .btn-default--hex::before, .btn-default--hex::after {
     content: '';
     position: absolute;
-    -webkit-transform: scale(0.31, 0.74) rotate(45deg);
-    transform: scale(0.31, 0.74) rotate(45deg);
+    -webkit-transform: scale(0.31, 0.77) rotate(45deg);
+    transform: scale(0.31, 0.77) rotate(45deg);
     position: absolute;
     width: 9vw;
     height: 9vw;
@@ -450,11 +450,11 @@ input[type=number] {
     box-sizing: border-box;
     top: 0; }
   .btn-default--hex::before {
-    right: -4.4vw;
+    right: -4.6vw;
     border-top: 0.15rem solid #fff;
     border-right: 0.15rem solid #fff; }
   .btn-default--hex::after {
-    left: -4.4vw;
+    left: -4.6vw;
     border-bottom: 0.15rem solid #fff;
     border-left: 0.15rem solid #fff; }
 
