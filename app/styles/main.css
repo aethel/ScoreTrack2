@@ -115,7 +115,8 @@ h2, .h2 {
   width: 100vmin;
   min-height: 100vh;
   height: auto;
-  background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent; }
+  background: url(../../../images/bg-small.png) no-repeat 22% center/cover transparent;
+  position: relative; }
   .container:after {
     position: absolute;
     content: '';
@@ -179,8 +180,9 @@ h2, .h2 {
 @media screen and (orientation: landscape) {
   .container {
     width: 100vmax;
-    height: 100vh;
-    background: url(../../../images/bg-small.png) no-repeat 6% 8%/cover auto transparent; }
+    height: auto;
+    min-height: 100vh;
+    background: url(../../../images/bg-small.png) no-repeat 6% 8%/cover transparent; }
 
   #startList {
     display: -webkit-box;
@@ -363,8 +365,9 @@ input[type=number] {
   font-size: 9vh;
   text-align: center;
   color: #fff;
-  font-family: "Quicksand", Arial, sans-serif;
-  height: 80%; }
+  font-family: "Quicksand", Arial, sans-serif; }
+  input[type=number]:focus {
+    outline: none; }
 
 .form-input {
   margin: 2vw 0 4vw 0; }
@@ -410,7 +413,7 @@ input[type=number] {
       border-left: 0.2rem solid #fff; }
 
   input[type=number] {
-    font-size: 15vh; }
+    font-size: 13vh; }
 
   .form-input {
     margin: 3vw 0 3vw 0; }
@@ -469,11 +472,11 @@ input[type=number] {
 @media screen and (orientation: landscape) {
   .view-wrapper #startList + .btn-default--hex {
     position: absolute;
-    left: 50%;
+    left: 51%;
     top: auto;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    bottom: 10%; } }
+    -webkit-transform: translate(-51%, 0);
+    -ms-transform: translate(-51%, 0);
+    transform: translate(-51%, 0);
+    bottom: 3%; } }
 
 /*# sourceMappingURL=main.css.map */

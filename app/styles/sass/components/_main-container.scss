@@ -3,7 +3,7 @@
 	min-height: 100vh;
 	height:auto;
 	background: url(../../../images/bg-small.png) no-repeat 22% center / cover transparent;
-
+	position: relative;
 
 	&:after {
 		position: absolute;
@@ -43,8 +43,9 @@
 @media screen and (orientation: landscape) {
 	.container {
 		width: 100vmax;
-		height: 100vh;
-		background: url(../../../images/bg-small.png) no-repeat 6% 8%/cover auto transparent;
+		height: auto;
+		min-height: 100vh;
+		background: url(../../../images/bg-small.png) no-repeat 6% 8%/cover transparent;
 	}
 
 	#startList {

@@ -21,8 +21,8 @@
 
 	@media screen and (orientation:landscape) {
 		#startList + .btn-default--hex {
-			@include centringVH(50%,auto);
-			bottom:10%;
+			@include centringVH(51%,auto);
+			bottom:3%;
 		}
 	}
 
