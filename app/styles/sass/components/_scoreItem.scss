@@ -1,3 +1,8 @@
+score-item {
+    @include container(row,nowrap,space-between,stretch,flex-start);
+    height: 100%;
+}
+
 .si__wrapper {
-    	@include container(row,no-wrap,space-between,center,center);
+    @include container(row,no-wrap,space-between,stretch,center);
 }

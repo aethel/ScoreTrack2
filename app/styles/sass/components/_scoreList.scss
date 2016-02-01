@@ -1,6 +1,7 @@
 .score-elements-list {
 	@include container(column,no-wrap,space-between,stretch,stretch);
 	list-style-type:none;
+    height: 100%;
 }
 
 

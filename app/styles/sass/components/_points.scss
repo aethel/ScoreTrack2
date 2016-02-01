@@ -1,0 +1,7 @@
+.si__points {
+    @include makeHex(45deg,11,red, pink);
+    display: inline-block;
+    padding:1.4vh 2vh;
+    line-height: 4.5;
+    height: 80%;
+}

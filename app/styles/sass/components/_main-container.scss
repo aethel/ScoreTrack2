@@ -32,7 +32,11 @@
 .view-wrapper,
 .main-header {
 	position: relative;
-	z-index: 3;
+	z-index: 3;    
+}
+
+.view-wrapper {
+    height:80vh;
 }
 
 

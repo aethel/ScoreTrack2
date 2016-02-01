@@ -1,5 +1,3 @@
 .si__points-wrapper {
-//	@include centringVH(50%,50%);
-	@include makeHex(45deg,9,red, pink);
     @include item(0, 1, auto);
 }
