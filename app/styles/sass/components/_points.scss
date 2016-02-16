@@ -1,7 +1,33 @@
 .si__points {
-    @include makeHex(45deg,11,red, pink);
     display: inline-block;
-    padding:1.4vh 2vh;
-    line-height: 4.5;
-    height: 80%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    width: 29vw;
+    
+//    
+//    &:after,
+//    &:before{
+//        content: '';
+//        position: absolute;;
+//        height: 50%;
+//        left: 0;
+//        right: 0;
+//        background: red;
+//        opacity:0.5;
+//        z-index: 1;
+//    }
+//    
+//    &:after{
+//        content: '';
+//        bottom:0;
+//        transform: skewX(-25deg);
+//    }
+//    
+//    &:before{
+//        content: '';
+//        top:0;
+//        transform: skewX(25deg);
+//    }
+    
 }

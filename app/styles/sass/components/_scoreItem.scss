@@ -5,4 +5,5 @@ score-item {
 
 .si__wrapper {
     @include container(row,no-wrap,space-between,stretch,center);
+    width:100%;
 }

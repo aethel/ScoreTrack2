@@ -1,3 +1,7 @@
 .si__points-wrapper {
-    @include item(0, 1, auto);
+    @include item(1, 0, auto);
+    height: 100%;
+    text-align: center;
+    line-height: 2.4;
+    font-size: 1.8rem;
 }

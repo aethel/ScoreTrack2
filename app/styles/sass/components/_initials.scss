@@ -1,4 +1,7 @@
 .si__initials{
-	width:2rem;
-	display: block;
+//    @include makeHex(45deg,11,red, pink);
+	display: inline-block;
+    background: red;
+    text-align: center;
+    height: 100%;
 }

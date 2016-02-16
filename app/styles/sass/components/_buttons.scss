@@ -16,7 +16,7 @@
 .view-wrapper {
 	#startList + .btn-default--hex {
 		@include centringVH(50%,auto);
-		bottom:-10%;
+		bottom:-3%;
 	}
 
 	@media screen and (orientation:landscape) {
