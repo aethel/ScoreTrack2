@@ -4,30 +4,31 @@
     position: relative;
     text-align: center;
     width: 29vw;
+    box-sizing: border-box;
     
 //    
-//    &:after,
-//    &:before{
-//        content: '';
-//        position: absolute;;
-//        height: 50%;
-//        left: 0;
-//        right: 0;
-//        background: red;
-//        opacity:0.5;
-//        z-index: 1;
-//    }
-//    
-//    &:after{
-//        content: '';
-//        bottom:0;
-//        transform: skewX(-25deg);
-//    }
-//    
-//    &:before{
-//        content: '';
-//        top:0;
-//        transform: skewX(25deg);
-//    }
+    &:after,
+    &:before{
+        content: '';
+        position: absolute;;
+        height: 50%;
+        left: 0;
+        right: 0;
+        background: red;
+        opacity:0.5;
+        z-index: -1;
+    }
+    
+    &:after{
+        content: '';
+        bottom:0;
+        transform: skewX(-25deg);
+    }
+    
+    &:before{
+        content: '';
+        top:0;
+        transform: skewX(25deg);
+    }
     
 }
