@@ -5,17 +5,18 @@
     text-align: center;
     height: 100%; 
     position: relative;
+    margin:0 0.5rem 0 0;
     
     &::before,
 	&::after{
 		content:'';
 		position: absolute;
-		-webkit-transform: scale(0.5, 0.76)  rotate(45deg);
-		transform: rotate(45deg);
+		-webkit-transform: scale(0.4, 0.76)  rotate(45deg);
+		transform:scale(0.4, 0.76) rotate(45deg);
 		position: absolute;
 		width: 4rem;
 		height: 4rem;
-		background: green;
+		background: red;
 		box-sizing:border-box;
 		top:0.1rem;
         z-index: -1;
