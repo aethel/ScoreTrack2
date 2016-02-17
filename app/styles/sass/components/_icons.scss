@@ -1,0 +1,38 @@
+%icon {
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: transparent;
+    }
+}
+
+.icon--info {
+    @extend %icon;
+    &:before{
+        background-image: url(../../../images/info.png);
+    }
+
+}
+.icon--refresh {
+    @extend %icon;
+    &:before{
+        background-image : url(../../../images/refresh.png);
+    }
+}
+.icon--tap {
+    @extend %icon;
+    &:before{
+        background-image: url(../../../images/tap.png);
+    }
+}
+.icon--longtap {
+    @extend %icon;
+    &:before{
+        background-image: url(../../../images/longtap.png);
+    }
+}

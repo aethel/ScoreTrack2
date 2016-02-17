@@ -1,11 +1,14 @@
-<a ng-href="#/">Restart</a>
-<button ng-click="toggleVisibility()">instructions</button>
+<a class="icon--refresh" ng-href="#/">Restart</a>
+<button class="icon--info" ng-click="toggleVisibility()">instructions</button>
 	<div ng-show="instructionsNeeded" class="sliding panel overlay">
-		<p>
-			tap to add/subtract point
+	<button ng-click="toggleVisibility()">close</button>
+	<h3 class="h3">Instructions</h3>
+		<p class="icon--tap">
+			Tap on hex to enter a player's initials.
 		</p>
-		<p>
-			longtap to add/subtract 10 points
+		<p class="icon--tap">Tap plus or minus to add/subtract points by one.</p>
+		<p  class="icon--longtap">
+			Tap &amp; hold to change the number of points by ten.
 		</p>
 	</div>
  <ul class="score-elements-list">

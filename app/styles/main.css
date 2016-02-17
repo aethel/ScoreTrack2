@@ -379,11 +379,27 @@ score-item {
 
 .overlay {
   position: absolute;
-  top: 3rem;
+  top: -4rem;
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.78);
+  padding: 1rem;
+  z-index: 9999;
+  pointer-events: all; }
+  .overlay p {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0; }
+  .overlay .h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0 0 3rem 0; }
+  .overlay .icon--longtap:before,
+  .overlay .icon--tap:before {
+    width: 4rem;
+    height: 6rem;
+    float: left;
+    margin: 0 1rem 0 0; }
 
 .hex-field--points,
 .hex-field--players {
@@ -618,5 +634,27 @@ input[type=number] {
     content: '';
     top: 0;
     transform: skewX(25deg); }
+
+.icon--info:before, .icon--refresh:before, .icon--tap:before, .icon--longtap:before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent; }
+
+.icon--info:before {
+  background-image: url(../../../images/info.png); }
+
+.icon--refresh:before {
+  background-image: url(../../../images/refresh.png); }
+
+.icon--tap:before {
+  background-image: url(../../../images/tap.png); }
+
+.icon--longtap:before {
+  background-image: url(../../../images/longtap.png); }
 
 /*# sourceMappingURL=main.css.map */
