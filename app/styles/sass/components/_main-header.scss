@@ -1,8 +1,31 @@
 .main-header {
-    margin:0 0 1rem 0;
+	@include container(row,nowrap);
+	margin:0 0 1rem 0;
+	padding: 0 1rem;
 	h1 {
+		@include item(1,0,auto);
 		font-size: 2.5rem;
 		text-align: center;
 		padding:0.5rem 0 0 0;
+	}
+
+	.icon--refresh {
+		&:before{
+			top:calc(50% - 0.75rem);
+			width: 2rem;
+			height: 2rem;
+			position: relative;
+		}
+	}
+
+	.icon--info {
+		border:0;
+		background:transparent;
+		&:before{
+			top:calc(50% - 1rem);
+			width: 1.5rem;
+			height: 1.5rem;
+			position: relative;
+		}
 	}
 }
