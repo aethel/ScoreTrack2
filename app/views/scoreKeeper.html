@@ -1,8 +1,9 @@
 <a class="icon--refresh" ng-href="#/">Restart</a>
 <button class="icon--info" ng-click="toggleVisibility()">instructions</button>
 	<div ng-show="instructionsNeeded" class="sliding panel overlay">
-	<button ng-click="toggleVisibility()">close</button>
-	<h3 class="h3">Instructions</h3>
+		<button class="btn--close" ng-click="toggleVisibility()"></button>
+		<h3 class="h3">	Instructions</h3>
+
 		<p class="icon--tap">
 			Tap on hex to enter a player's initials.
 		</p>
