@@ -472,7 +472,7 @@ score-item {
   pointer-events: all; }
   .overlay p {
     font-size: 1.5rem;
-    margin: 0 0 2rem 0; }
+    margin: 0 0 3rem 0; }
   .overlay .h3 {
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -611,7 +611,8 @@ input[type=number] {
   height: 100%;
   position: relative;
   width: 2.4rem;
-  min-height: 4.3rem; }
+  min-height: 4.3rem;
+  white-space: nowrap; }
   .si__initials::before, .si__initials::after {
     content: '';
     position: absolute;
@@ -683,11 +684,11 @@ input[type=number] {
     bottom: 3%; } }
 
 .si__btn {
-  -webkit-box-flex: 2;
-  -moz-box-flex: 2;
-  -webkit-flex: 2 0 auto;
-  -ms-flex: 2 0 auto;
-  flex: 2 0 auto;
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -webkit-flex: 3 0 auto;
+  -ms-flex: 3 0 auto;
+  flex: 3 0 auto;
   font-size: 2.5rem;
   color: #fff;
   background: transparent;

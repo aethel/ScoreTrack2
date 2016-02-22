@@ -5,6 +5,7 @@
     position: relative;
     width:2.4rem;
     min-height: 4.3rem;
+    white-space: nowrap;
     
     &::before,
 	&::after{
