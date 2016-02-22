@@ -1,9 +1,9 @@
 .si__points {
-    display: inline-block;
+    float:right;
     height: 100%;
     position: relative;
     text-align: center;
-    width: 29vw;
+    width: 33vw;
     box-sizing: border-box;
     
 //    
@@ -22,13 +22,13 @@
     &:after{
         content: '';
         bottom:0;
-        transform: skewX(-25deg);
+        transform: skewX(-27deg);
     }
     
     &:before{
         content: '';
         top:0;
-        transform: skewX(25deg);
+        transform: skewX(27deg);
     }
     
 }

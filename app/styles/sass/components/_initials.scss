@@ -1,11 +1,12 @@
 .si__initials{
    
-    display: inline-block;
-    background: red;
+    float:left;
     text-align: center;
     height: 100%; 
     position: relative;
     margin:0 0.5rem 0 0;
+    width:2.4rem;
+    min-height: 4.3rem;
     
     &::before,
 	&::after{
@@ -16,7 +17,6 @@
 		position: absolute;
 		width: 4rem;
 		height: 4rem;
-		background: red;
 		box-sizing:border-box;
 		top:0.1rem;
         z-index: -1;

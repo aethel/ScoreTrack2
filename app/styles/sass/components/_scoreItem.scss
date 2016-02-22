@@ -1,6 +1,120 @@
+.sl__list-item{
+     &:nth-child(1){
+         .si__initials {
+            background: $player1bg;    
+         }
+         
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player1bg;    
+            }            
+        }
+    }
+
+    &:nth-child(2){
+        .si__initials {
+            background: $player2bg;    
+         }
+        
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player2bg;    
+            }            
+        }
+    }
+
+    &:nth-child(3){
+        .si__initials {
+            background: $player3bg;    
+         }
+        
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player3bg;    
+            }            
+        }
+    }
+
+    &:nth-child(4){
+        .si__initials {
+            background: $player4bg;    
+         }
+        
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player4bg;    
+            }            
+        }
+    }
+
+    &:nth-child(5){
+        .si__initials {
+            background: $player5bg;    
+         }
+        
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player5bg;    
+            }            
+        }
+    }
+
+    &:nth-child(6){
+        .si__initials {
+            background: $player6bg;    
+         }
+        
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player6bg;    
+            }            
+        }
+    }
+
+    &:nth-child(7){
+        .si__initials {
+            background: $player7bg;    
+         }
+        
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player7bg;    
+            }            
+        }
+    }
+
+    &:nth-child(8){
+        .si__initials {
+            background: $player8bg;    
+         }
+        
+        .si__initials,
+        .si__points{
+            &:before,
+            &:after {
+                background: $player8bg;    
+            }            
+        }
+    }
+}
+
 score-item {
     @include container(row,nowrap,space-between,stretch,flex-start);
-    height: 100%;
+    height: 100%;   
 }
 
 .si__wrapper {
