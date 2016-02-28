@@ -1,10 +1,14 @@
 .sl__list-item{
-	@include item(1,1);
-    padding: 0.2rem 0;
+	@include item(1,1,auto);
+	padding: 0.2rem 0;
 }
 
 
 
 @media screen and (orientation: landscape) {
-
+	.sl__list-item{
+		@include item(0,1,auto);
+		padding: 0.2rem 0;
+		max-width:50vw;
+	}
 }

@@ -3,3 +3,11 @@ h2,.h2 {
 	text-align:center;
 	font-weight:normal;
 }
+
+
+@media screen and (orientation: landscape) {
+	h2,.h2 {
+		font-size:1.1rem;
+	}
+}
+

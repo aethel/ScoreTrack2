@@ -111,6 +111,9 @@ h2, .h2 {
   text-align: center;
   font-weight: normal; }
 
+@media screen and (orientation: landscape) {
+  h2, .h2 {
+    font-size: 1.1rem; } }
 .container {
   width: 100vmin;
   min-height: 100vh;
@@ -310,9 +313,9 @@ h2, .h2 {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-wrap: no-wrap;
-    -ms-flex-wrap: no-wrap;
-    flex-wrap: no-wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: stretch;
     -moz-box-align: stretch;
     -webkit-align-items: stretch;
@@ -337,15 +340,25 @@ h2, .h2 {
     justify-content: space-between;
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
-    align-content: stretch; } }
+    align-content: stretch;
+    max-width: 100vw; } }
 .sl__list-item {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 0.2rem 0; }
 
+@media screen and (orientation: landscape) {
+  .sl__list-item {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 0.2rem 0;
+    max-width: 50vw; } }
 .sl__list-item:nth-child(1) .si__initials {
   background: #d53e4f; }
 .sl__list-item:nth-child(1) .si__initials:before, .sl__list-item:nth-child(1) .si__initials:after,
@@ -679,7 +692,7 @@ input[type=number] {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  bottom: -3%; }
+  bottom: -7%; }
 @media screen and (orientation: landscape) {
   .view-wrapper #startList + .btn-default--hex {
     position: absolute;
@@ -688,7 +701,7 @@ input[type=number] {
     -webkit-transform: translate(-51%, 0);
     -ms-transform: translate(-51%, 0);
     transform: translate(-51%, 0);
-    bottom: 3%; } }
+    bottom: -10%; } }
 
 .si__btn {
   -webkit-box-flex: 3;
@@ -762,6 +775,9 @@ input[type=number] {
     transform: skewX(27deg);
     height: calc(50% - 1px); }
 
+@media screen and (orientation: landscape) {
+  .si__points {
+    width: 17vw; } }
 .icon--info:before, .icon--refresh:before, .icon--tap:before, .icon--longtap:before {
   content: '';
   display: inline-block;

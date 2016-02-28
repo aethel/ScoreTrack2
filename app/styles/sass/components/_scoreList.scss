@@ -1,13 +1,13 @@
 .score-elements-list {
 	@include container(column,no-wrap,space-between,stretch,stretch);
 	list-style-type:none;
-    height: 100%;
+		height: 100%;
 }
 
 
 @media screen and (orientation: landscape) {
 	.score-elements-list {
-		@include container(row,no-wrap,space-between,stretch,stretch);
-
+		@include container(row,wrap,space-between,stretch,stretch);
+		max-width:100vw;
 	}
 }
