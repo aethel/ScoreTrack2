@@ -3,7 +3,7 @@
 angular.module('stApp').directive('ngMobileClick', function($timeout, $interval) {
 						return {
 								restrict: 'A',
-								link: function(scope, elem, attrs) {
+								link: function(scope, elem) {
 									var timer,
 											interval;
 										elem.bind('touchstart', function(e) {
@@ -13,19 +13,19 @@ angular.module('stApp').directive('ngMobileClick', function($timeout, $interval)
 														function() {
 																timer.then(function() {
 																		interval = $interval(function() {
-																				addPoints(targetBtn, 10);
+																				modifyPoints(targetBtn, 10,'add');
 																		}, 500);
 																}, function() {
-																		addPoints(targetBtn, 1);
+																		modifyPoints(targetBtn, 1,'add');
 																});
 														}() :
 														function() {
 																timer.then(function() {
 																		interval = $interval(function() {
-																				subtractPoints(targetBtn, 10);
+																				modifyPoints(targetBtn, 10,'subtract');
 																		}, 500);
 																}, function() {
-																		subtractPoints(targetBtn, 1);
+																		modifyPoints(targetBtn, 1,'subtract');
 																});
 														}();
 										});
@@ -36,20 +36,13 @@ angular.module('stApp').directive('ngMobileClick', function($timeout, $interval)
 													$interval.cancel(interval);
 											});
 
-											var addPoints = function(targetBtn, valueAdded) {
-													var value = parseInt(targetBtn.nextElementSibling.textContent);
-													var target = targetBtn.nextElementSibling;
-													value += valueAdded;
+											var modifyPoints = function(targetBtn, valueAdded,modifier) {
+												console.log(modifier);
+													var target = targetBtn.parentNode.querySelector('.si__points');
+													var value = parseInt(target.textContent);
+													modifier === 'add' ?  value += valueAdded : value -= valueAdded
 													target.textContent = value;
 											};
-
-											var subtractPoints = function(targetBtn, valueAdded) {
-													var value = parseInt(targetBtn.previousElementSibling.textContent);
-													var target = targetBtn.previousElementSibling;
-													value -= valueAdded;
-													target.textContent = value;
-											};
-
 								}
 						};
 });
