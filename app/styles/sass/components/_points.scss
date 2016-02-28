@@ -1,34 +1,36 @@
 .si__points {
-    float:right;
-    height: 100%;
-    position: relative;
-    text-align: center;
-    width: 33vw;
-    box-sizing: border-box;
-    
-//    
-    &:after,
-    &:before{
-        content: '';
-        position: absolute;;
-        height: 50%;
-        left: 0;
-        right: 0;
-        background: red;
-        opacity:0.5;
-        z-index: -1;
-    }
-    
-    &:after{
-        content: '';
-        bottom:0;
-        transform: skewX(-27deg);
-    }
-    
-    &:before{
-        content: '';
-        top:0;
-        transform: skewX(27deg);
-    }
-    
+		float:left;
+		height: 100%;
+		position: relative;
+		text-align: center;
+		width: 32vw;
+		box-sizing: border-box;
+		margin:0 0 0 1rem;
+
+//
+		&:after,
+		&:before{
+				content: '';
+				position: absolute;;
+				left: 0;
+				right: 0;
+				background: red;
+				opacity:0.5;
+				z-index: -1;
+		}
+
+		&:after{
+				content: '';
+				bottom:0;
+				transform: skewX(-27deg);
+				height: calc(50% + 1px);
+		}
+
+		&:before{
+				content: '';
+				top:0;
+				transform: skewX(27deg);
+				 height: calc(50% - 1px);
+		}
+
 }

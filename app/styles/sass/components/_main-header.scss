@@ -10,11 +10,13 @@
 	}
 
 	.icon--refresh {
+		@include item(0,1,2rem);
+		position: relative;
 		&:before{
 			top:calc(50% - 0.75rem);
 			width: 2rem;
 			height: 2rem;
-			position: relative;
+			position: absolute;
 		}
 	}
 

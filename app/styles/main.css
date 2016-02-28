@@ -245,11 +245,18 @@ h2, .h2 {
     font-size: 2.5rem;
     text-align: center;
     padding: 0.5rem 0 0 0; }
-  .main-header .icon--refresh:before {
-    top: calc(50% - 0.75rem);
-    width: 2rem;
-    height: 2rem;
+  .main-header .icon--refresh {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 2rem;
+    -ms-flex: 0 1 2rem;
+    flex: 0 1 2rem;
     position: relative; }
+    .main-header .icon--refresh:before {
+      top: calc(50% - 0.75rem);
+      width: 2rem;
+      height: 2rem;
+      position: absolute; }
   .main-header .icon--info {
     border: 0;
     background: transparent; }
@@ -729,16 +736,16 @@ input[type=number] {
   padding: 0 0.6rem 0 1.1rem; }
 
 .si__points {
-  float: right;
+  float: left;
   height: 100%;
   position: relative;
   text-align: center;
-  width: 33vw;
-  box-sizing: border-box; }
+  width: 32vw;
+  box-sizing: border-box;
+  margin: 0 0 0 1rem; }
   .si__points:after, .si__points:before {
     content: '';
     position: absolute;
-    height: 50%;
     left: 0;
     right: 0;
     background: red;
@@ -747,11 +754,13 @@ input[type=number] {
   .si__points:after {
     content: '';
     bottom: 0;
-    transform: skewX(-27deg); }
+    transform: skewX(-27deg);
+    height: calc(50% + 1px); }
   .si__points:before {
     content: '';
     top: 0;
-    transform: skewX(27deg); }
+    transform: skewX(27deg);
+    height: calc(50% - 1px); }
 
 .icon--info:before, .icon--refresh:before, .icon--tap:before, .icon--longtap:before {
   content: '';
