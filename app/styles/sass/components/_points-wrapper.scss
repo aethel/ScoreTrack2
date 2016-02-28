@@ -1,9 +1,17 @@
 .si__points-wrapper {
-    @include item(1, 0, auto);
-    height: 100%;
-    text-align: center;
-    line-height: 2.4;
-    font-size: 1.8rem;
-    padding:0 0.6rem 0 1.1rem;
+		@include item(1, 0, auto);
+		height: 100%;
+		text-align: center;
+		line-height: 2.4;
+		font-size: 1.8rem;
+		padding:0 0.6rem 0 1.1rem;
 
 }
+
+@media screen and (orientation: landscape){
+	.si__points-wrapper {
+		line-height: 2.2;
+		font-size: 1.4rem;
+	}
+}
+

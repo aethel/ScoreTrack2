@@ -649,6 +649,30 @@ input[type=number] {
   .si__initials::after {
     left: -2rem; }
 
+@media screen and (orientation: landscape) {
+  .si__initials {
+    float: left;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    width: 2rem;
+    min-height: 3rem;
+    white-space: nowrap; }
+    .si__initials::before, .si__initials::after {
+      content: '';
+      position: absolute;
+      -webkit-transform: scale(0.4, 0.72) rotate(45deg);
+      transform: scale(0.4, 0.72) rotate(45deg);
+      position: absolute;
+      width: 2.9rem;
+      height: 2.9rem;
+      box-sizing: border-box;
+      top: 0.05rem;
+      z-index: -1; }
+    .si__initials::before {
+      right: -1.46rem; }
+    .si__initials::after {
+      left: -1.47rem; } }
 .btn-default--hex {
   font-size: 4vw;
   color: white;
@@ -748,6 +772,10 @@ input[type=number] {
   font-size: 1.8rem;
   padding: 0 0.6rem 0 1.1rem; }
 
+@media screen and (orientation: landscape) {
+  .si__points-wrapper {
+    line-height: 2.2;
+    font-size: 1.4rem; } }
 .si__points {
   float: left;
   height: 100%;
