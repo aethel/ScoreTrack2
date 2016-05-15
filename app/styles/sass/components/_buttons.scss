@@ -11,6 +11,7 @@
 	text-transform: uppercase;
 	position: relative;
 	box-sizing: border-box;
+	z-index: 9999;
 }
 
 .view-wrapper {
@@ -30,11 +31,15 @@
 
 
 .si__btn {
-		@include item(3,0,auto);
-		font-size: 2.5rem;
-		color:#fff;
-		background: transparent;
-		border:none;
+	@include item(3,0,auto);
+	font-size: 2.5rem;
+	color:#fff;
+	background: transparent;
+	border:none;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
 }
 
 .btn--close {
@@ -62,7 +67,7 @@
 	&:after{
 		-webkit-transform:  translate(-50%, -50%) rotate(-45deg);
 		transform:  translate(-50%, -50%) rotate(- 45deg);
-	}
+			}
 
 	&:hover,
 	&:active {
