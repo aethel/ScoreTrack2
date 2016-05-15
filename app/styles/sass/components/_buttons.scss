@@ -73,6 +73,10 @@
 	&:active {
 		cursor: pointer;
 	}
+}
 
-
+@media screen and (orientation:landscape) and (max-width: 400px){
+	.si__btn {
+		font-size: 1rem;
+	}
 }

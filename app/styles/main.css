@@ -768,6 +768,9 @@ input[type=number] {
   .btn--close:hover, .btn--close:active {
     cursor: pointer; }
 
+@media screen and (orientation: landscape) and (max-width: 400px) {
+  .si__btn {
+    font-size: 1rem; } }
 .si__points-wrapper {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;

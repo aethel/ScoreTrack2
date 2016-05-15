@@ -122,9 +122,7 @@ score-item {
 		width:100%;
 }
 
-@media screen and (orientation:landscape) {
-	.sl__list-item{
+@media screen and (orientation:landscape) and (max-width: 450px){
 
-	}
 }
 
