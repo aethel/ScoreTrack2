@@ -630,8 +630,9 @@ input[type=number] {
   text-align: center;
   height: 100%;
   position: relative;
-  width: 2.4rem;
-  min-height: 4.3rem; }
+  width: 2.5rem;
+  height: 4.3rem;
+  letter-spacing: -4px; }
   .si__initials::before, .si__initials::after {
     content: '';
     position: absolute;
@@ -650,7 +651,6 @@ input[type=number] {
 
 .si__initials-wrapper {
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   width: 100%;
   display: block; }
@@ -662,7 +662,7 @@ input[type=number] {
     height: 100%;
     position: relative;
     width: 2rem;
-    min-height: 3rem;
+    height: 3rem;
     white-space: nowrap; }
     .si__initials::before, .si__initials::after {
       content: '';
@@ -786,7 +786,7 @@ input[type=number] {
   height: 100%;
   text-align: center;
   line-height: 2.4;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   padding: 0 0.6rem 0 1.1rem; }
 
 @media screen and (orientation: landscape) {

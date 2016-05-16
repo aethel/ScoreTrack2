@@ -12,17 +12,9 @@ angular.module('stApp').directive('scoreItem', function($timeout){
 			var initials = document.querySelectorAll('.si__initials'),
 					list = document.querySelector('.score-elements-list');
 
-			list.addEventListener('click', function(e){
-				if(e.target != e.currentTarget && e.target.classList.contains('si__initials')){
-					console.log(e.target, e.target.classList);
-				} else {
-					console.log(e.currentTarget);
-				}
-
-
-			},false);
-
-
+			for (var i=0; i<initials.length; i++) {
+				initials[i].textContent = i + 1;
+			}
 		}
 	};
 });
