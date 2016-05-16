@@ -3,9 +3,8 @@
 	text-align: center;
 	height: 100%;
 	position: relative;
-	width:2.5rem;
-	height: 4.3rem;
-	letter-spacing: -4px;
+	width:2.4rem;
+	min-height: 4.3rem;
 
 	&::before,
 	&::after{
@@ -33,6 +32,7 @@
 
 .si__initials-wrapper {
 	white-space: nowrap;
+	text-overflow: ellipsis;
 	overflow: hidden;
 	width: 100%;
 	display: block;
@@ -46,7 +46,7 @@
 		height: 100%;
 		position: relative;
 		width:2rem;
-		height: 3rem;
+		min-height: 3rem;
 		white-space: nowrap;
 
 		&::before,
