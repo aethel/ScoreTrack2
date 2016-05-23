@@ -690,7 +690,8 @@ input[type=number] {
   text-transform: uppercase;
   position: relative;
   box-sizing: border-box;
-  z-index: 9999; }
+  z-index: 9999;
+  pointer-events: all; }
   .btn-default--hex {
     display: inline-block;
     background: transparent;
@@ -715,6 +716,8 @@ input[type=number] {
     left: -4.6vw;
     border-bottom: 0.15rem solid #fff;
     border-left: 0.15rem solid #fff; }
+  .btn-default--hex::after, .btn-default--hex::before {
+    pointer-events: none; }
 
 .view-wrapper #startList + .btn-default--hex {
   position: absolute;

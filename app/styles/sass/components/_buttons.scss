@@ -12,6 +12,12 @@
 	position: relative;
 	box-sizing: border-box;
 	z-index: 9999;
+	pointer-events: all;
+
+	&::after,
+	&::before {
+		pointer-events: none;
+	}
 }
 
 .view-wrapper {
