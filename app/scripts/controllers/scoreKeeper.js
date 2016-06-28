@@ -26,4 +26,13 @@ angular.module('stApp').controller('ScoreCtrl', function($scope, InitData, $comp
 		start--;
 	};
 
+	$scope.confirmReset = function($event){
+		console.log($event,$event.currentTarget);
+		if(!confirm('Definitely reset?')) {
+			console.log('resetting');
+			$event.preventDefault();
+		} else {
+			return true;
+		}
+	}
 });
