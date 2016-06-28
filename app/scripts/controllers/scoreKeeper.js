@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('stApp').controller('ScoreCtrl', function($scope, InitData, $compile){
+angular.module('stApp').controller('ScoreCtrl', function($scope, $location, InitData, $compile){
 	$scope.init = InitData.getValue();
 
 	$scope.instructionsNeeded = true;
@@ -26,13 +26,13 @@ angular.module('stApp').controller('ScoreCtrl', function($scope, InitData, $comp
 		start--;
 	};
 
-	$scope.confirmReset = function($event){
-		console.log($event,$event.currentTarget);
-		if(!confirm('Definitely reset?')) {
+	$scope.confirmReset = function(){
+	//	console.log($event,$event.currentTarget);
+		if(confirm('Definitely reset?')) {
 			console.log('resetting');
-			$event.preventDefault();
+			$location.url('/');
 		} else {
-			return true;
+			return false;
 		}
 	}
 });
