@@ -17,8 +17,17 @@ angular.module('stApp').directive('scoreItem', function($timeout){
 //				initials[i].textContent = i+1
 //			}
 			for(var i=0;i<initials.length;i++){
+				initials[i].addEventListener('click',function($event){
+						$event.currentTarget.textContent = '';
+						$event.currentTarget.setAttribute('contenteditable','true');
+				},false);
+
 				initials[i].addEventListener('input',function($event){
-					console.log($event.currentTarget);
+					var text = $event.currentTarget.textContent;
+					if(text.length >= 1) {
+						text = text.slice(0,1);
+						$event.currentTarget.setAttribute('contenteditable','false');
+					}
 				},false);
 			}
 
