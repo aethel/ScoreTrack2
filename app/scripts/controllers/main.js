@@ -8,7 +8,7 @@
  * Controller of the stApp
  */
 angular.module('stApp')
-	.controller('MainCtrl', function ($scope, InitData) {
+	.controller('MainCtrl', function ($scope, InitData, $location) {
 	var player = $scope.player;
 	var points = $scope.points;
 
@@ -27,6 +27,7 @@ angular.module('stApp')
 
  $scope.pushObject = function(){
 		InitData.setValue($scope.init);
+	 $location.url('/scoreKeeper');
  };
 
 
