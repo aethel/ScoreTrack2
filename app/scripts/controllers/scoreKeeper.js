@@ -27,7 +27,7 @@ angular.module('stApp').controller('ScoreCtrl', function($scope, $location, Init
 	};
 
 	$scope.confirmReset = function(){
-		if(confirm('Definitely reset?')) {
+		if(confirm('Are you certain you wish to reset?')) {
 			$location.url('/');
 		} else {
 			return false;
