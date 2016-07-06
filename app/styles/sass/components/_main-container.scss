@@ -32,7 +32,7 @@
 .view-wrapper,
 .main-header {
 	position: relative;
-	z-index: 3;    
+	z-index: 3;
 }
 
 .view-wrapper {
@@ -55,5 +55,10 @@
 	#startList {
 		@include container(row,no-wrap,space-around,center,stretch);
 	}
+}
 
+@media screen and (max-height:495px) {
+	.container {
+		min-height: 110vh;
+	}
 }

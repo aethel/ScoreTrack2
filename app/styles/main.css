@@ -221,6 +221,9 @@ h2, .h2 {
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
     align-content: stretch; } }
+@media screen and (max-height: 495px) {
+  .container {
+    min-height: 110vh; } }
 .main-header {
   display: -webkit-box;
   display: -moz-box;
@@ -578,7 +581,8 @@ input[type=number] {
 
 .fi__header {
   text-align: center;
-  margin: 0 0 3rem 0; }
+  margin: 0 0 3rem 0;
+  padding: 0 1rem; }
 
 @media screen and (orientation: landscape) {
   .hex-field--points,

@@ -8,7 +8,7 @@ angular.module('stApp').directive('ngMobileClick', function($timeout, $interval)
 											interval;
 										elem.bind('touchstart', function(e) {
 												var targetBtn = e.target;
-												timer = $timeout(function() {}, 2000);
+												timer = $timeout(function() {}, 1000);
 												e.target.classList.contains('js-add-point') ?
 														function() {
 																timer.then(function() {
@@ -46,4 +46,3 @@ angular.module('stApp').directive('ngMobileClick', function($timeout, $interval)
 								}
 						};
 });
-
