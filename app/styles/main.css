@@ -757,7 +757,10 @@ input[type=number] {
   /* Firefox all */
   -ms-user-select: none;
   /* IE 10+ */
-  user-select: none; }
+  user-select: none;
+  max-width: 25%; }
+  .si__btn:focus {
+    outline: none; }
 
 .btn--close {
   border: none;
@@ -794,12 +797,13 @@ input[type=number] {
   text-align: center;
   line-height: 2.4;
   font-size: 1.8rem;
-  padding: 0 0.6rem 0 1.1rem; }
+  padding: 0 0 0 1.1rem; }
 
 @media screen and (orientation: landscape) {
   .si__points-wrapper {
     line-height: 2.2;
-    font-size: 1.3rem; } }
+    font-size: 1.3rem;
+    padding: 0 0.6rem 0 1.1rem; } }
 .si__points {
   float: left;
   height: 100%;

@@ -46,6 +46,10 @@
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
 	user-select: none;
+	max-width: 25%;
+	&:focus {
+		outline: none;
+	}
 }
 
 .btn--close {
