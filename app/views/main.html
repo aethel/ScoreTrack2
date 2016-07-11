@@ -7,15 +7,15 @@
 			<h2 class="h2">Start by adding initial number of points</h2>
 		</header>
 		<div class="hex-field--points">
-			<input ng-change="updatePoints(points)" type="number" ng-model="points" id="starting-score" value="0" required placeholder="0"/>
+			<input ng-change="updatePoints(points)" type="number" ng-model="points" id="starting-score" value="0" required placeholder="_"/>
 		</div>
 	</div>
 	<div class="form-input">
 		<header class="fi__header">
-			<h2 class="h2">Then, add the number of players (max 8)</h2>
+			<h2 class="h2">Then, add the number of players (min 1, max 8)</h2>
 		</header>
 		<div class="hex-field--players">
-			<input type="number" ng-change="updatePlayers(players)" id="players-value" ng-model="players" required placeholder="1" value="1"/>
+			<input type="number" ng-change="updatePlayers(players)" id="players-value" ng-model="players" required placeholder="_" value="1"/>
 		</div>
 	</div>
 </form>
