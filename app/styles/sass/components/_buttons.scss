@@ -23,13 +23,13 @@
 .view-wrapper {
 	#startList + .btn-default--hex {
 		@include centringVH(50%,auto);
-		bottom:-7%;
+		position: relative;
 	}
 
 	@media screen and (orientation:landscape) {
 		#startList + .btn-default--hex {
 			@include centringVH(51%,auto);
-			bottom:-10%;
+			position: relative;
 		}
 	}
 

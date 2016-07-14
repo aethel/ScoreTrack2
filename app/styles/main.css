@@ -731,7 +731,7 @@ input[type=number] {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  bottom: -7%; }
+  position: relative; }
 @media screen and (orientation: landscape) {
   .view-wrapper #startList + .btn-default--hex {
     position: absolute;
@@ -740,7 +740,7 @@ input[type=number] {
     -webkit-transform: translate(-51%, 0);
     -ms-transform: translate(-51%, 0);
     transform: translate(-51%, 0);
-    bottom: -10%; } }
+    position: relative; } }
 
 .si__btn {
   -webkit-box-flex: 3;

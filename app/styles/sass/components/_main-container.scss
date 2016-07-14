@@ -35,10 +35,6 @@
 	z-index: 3;
 }
 
-.view-wrapper {
-//    height:80vh;
-}
-
 
 #startList {
 	@include container(column,no-wrap,space-between,center,stretch);
